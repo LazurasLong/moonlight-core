@@ -21,7 +21,7 @@ Impossible        | -50        |
 
 ## Partial Successes
 
-Checks may succeed partially if they are within two degrees of failure. If a normal check partially succeeds, the successful result will happen, but there will be a caveat. For example, if someone partially succeeded on a deception check, they may decieve the person, but the person may continue to be suspicious, or the effects will wear off.
+Checks may succeed partially if they are within two degrees of failure. If a normal check partially succeeds, the successful result will happen, but there may be a caveat. For example, if someone partially succeeded on a deception check, they may decieve the person, but the person may continue to be suspicious, or perhaps the effects will wear off.
 
 ## Degrees of Success and Failure
 
