@@ -58,15 +58,37 @@ Left leg          | 86-00      |
 
 ### Status Effects
 
-`Haha actually create this system`
+Status effects are additional effects applied onto characters. These effects may be beneficial, or negative.
+
+#### Blindness
+
+#### Charmed
+
+#### Deafness
+
+#### Fatigue
+
+#### Fright
+
+#### Incapacitation
+
+#### Inspiration
+
+#### Paralysis
+
+#### Poison
+
+#### Rush
+
+#### Stun
 
 ## Combat Flow
 
 ### Initiating Combat
 
-When initiating combat, all character should roll initiative equal to xd10, where x is equal to the tenth digit of the SGL score.
+When initiating combat, all character should roll initiative equal to (x)d10, where x is equal to the tenth digit of the SGL score.
 
-If the attack is unexpected by the defenders, each attacker receives (in arbitrary) one extra full turn before initiative is taken into account.
+If the attack is unexpected by the defenders, each attacker receives (in arbitrary order) one extra full turn before initiative is taken into account.
 
 ### Turn actions
 
