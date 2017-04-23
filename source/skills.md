@@ -2,14 +2,14 @@
 
 A list of skills in the basic system.
 
-## Strength
+## STR Skills
 
 - Athletics
 - Climb
 - Martial Arts
 - Smithing
 
-## Agility
+## AGL Skills
 
 - Acrobatics
 - Animal Handling
@@ -26,11 +26,11 @@ A list of skills in the basic system.
 - Swim
 - Tracking
 
-## Toughness
+## TGH Skills
 
 - Survival
 
-## Mind
+## MND Skills
 
 - Appraise
 - Arcana
@@ -60,7 +60,7 @@ A list of skills in the basic system.
 - Statistics
 - Strategy
 
-## Charisma
+## CHA Skills
 
 - Barter
 - Bluff
@@ -76,7 +76,7 @@ A list of skills in the basic system.
 - Persuasion
 - Temptation
 
-## Perception
+## PER Skills
 
 - Deduce Motive
 - Detect Trap
