@@ -1,7 +1,39 @@
 # Races
 
-## Generalisation
+The description of races are typically not crucial to gameplay. Races are mostly for role-play and worldbuilding purposes.
+
+## Race Generalisation
 
 ### Characteristics Score Increase
 
 A race may provide a basic increase to characteristic scores. This is typically in the form of a base increase, (+5, etc.) or as a random dice-based increase (1d10, etc.)
+
+### Age
+
+The age range of a race indicate the ages during which a member of a race is typically considered an adult. This can vary between societies of races, and can be waved by the Game Master depending on the situation. A player may choose to play an exceptionally young, or old character, and in those situations, it is the responsibility of the Game Master to either deny the choice, or balance the character in respect to the player's choices.
+
+Age is not key to any core game mechanics.
+
+### Speed
+
+The base speed for humanoid creatures is 10m. Other forms of creatures, and potentially races, may have different speeds.
+
+### Skill Training
+
+The race will typically provide training in skills.
+
+## Fégée
+
+**Characteristics Score Increase:** Gain +10 to CHA and MND or +5 to any two characteristics scores.
+
+**Age:** Fégée typically mature at around 16 - 19 years old, and live for up to a century and a half.
+
+**Fée wisdom:** Gain training in any three MND or CHA skills.
+
+## Human
+
+**Characteristics Score Increase:** Gain +10 to any characteristic or +5 to all characteristics.
+
+**Age:** Humans typically mature at around 16 - 19 years old, and live for less than a century.
+
+**Jack of all trades:** Gain training in any three skills.

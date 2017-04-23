@@ -17,9 +17,9 @@ Each location tracks wounds. Bodily locations include:
 
 Each location may sustain three types of damage.
 
-1. **Flesh-wounds:** a hit that results in no immediate danger. However, they can build up. Three flesh-wounds create an injury.
-2. **Injury:** a strike that is damaging. Each injury on a location grants a -5 modifier to utilising that location.
-3. **Critical Injury:** an injury that disables the location entirely. If this is to the head or torso, it creates a mortal injury.
+1. **Flesh-wounds:** A hit that results in no immediate danger. However, they can build up. Three flesh-wounds create an injury.
+2. **Injury:** A strike that is damaging. Each injury on a location grants a -5 modifier to utilising that location.
+3. **Critical Injury:** An injury that disables the location entirely. If this is to the head or torso, it creates a mortal injury.
 	- Upon receiving a critical injury, make a TGN check. On failure, the location is removed. This does not apply to the head or torso.
 	- The number of injuries to each location needed to form a Critical Injury on a normal human, or human-like creature:
 		+ Arms: 10
