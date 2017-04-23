@@ -30,6 +30,6 @@ fs.readdirSync("./source").forEach(function (file, index) {
 
 template = handlebars.compile(fs.readFileSync("./static/index.hbs", { encoding: "utf8" }));
 
-fs.writeFileSync("./build/moonlight.html", template({ content: output }));
+fs.writeFileSync("./build/index.html", template({ content: output }));
 
 fs.copySync('./static/res', './build/res')

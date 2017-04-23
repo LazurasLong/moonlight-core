@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <nav id="nav"></nav>
+    <nav tabindex="1"></nav>
     <div class="content">
         {{{content}}}
     </div>
@@ -24,7 +24,7 @@
 
         console.log(headers);
 
-        $.each(headers, function () {
+        $.each(headers, function (index) {
             var a = $('<a/>').text($(this).text()).attr('href', '#' + $(this).attr('id'));
             var li = $('<li/>').append(a);
             var depth = parseInt(this.tagName.substring(1));
