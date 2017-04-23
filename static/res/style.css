@@ -21,7 +21,6 @@ nav {
     border-right: #bfc0c8 1px solid;
     background: white;
     z-index: 9999;
-    overflow-y: hidden;
 }
 
 nav:hover,
