@@ -4,7 +4,7 @@
 
 The person in charge of the game is known as the Game Master. This system document assumes you are familiar to traditional tabletop Role-playing games.
 
-It must be stressed that the Game Master's word is final and absolute. They are the person in charge of the game, and whatever they say count from a rules perspective. There will be parts of the game when a Game Master's judgement is necessary.
+It must be stressed that the Game Master's word is final and absolute. They are the person in charge of the game, and whatever they say counts from a rules perspective. There will be parts of the game when a Game Master's judgement is necessary.
 
 ## System guidelines and functions
 
@@ -114,7 +114,7 @@ After a difficulty has been determined, roll a d100 and compare the roll to the 
 
 **Skill checks** are made when a character utilises a known skill. Making a skill check is the same as making a basic check.
 
-### Characteristic Checks.
+### Characteristic Checks
 
 **Characteristic checks** are made using the base characteristic of a character. The mechanics for characteristic checks vary depending on the situation.
 
@@ -134,7 +134,7 @@ Very Hard         | -30        |
 Painstaking       | -40        |
 Impossible        | -50        |
 
-#### Other Characteristic Checks.
+#### Other Characteristic Checks
 
 Characteristic checks are also made in other situations, such as when resisting status effects, rolling in combat, and most other circumstances when skills do not apply. Making these checks is the same as making a basic check.
 

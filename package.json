@@ -1,0 +1,20 @@
+{
+  "name": "moonlight-core",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonlight-rpg/moonlight-core.git"
+  },
+  "author": "Project Moonlight",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "fs-extra": "^2.1.2",
+    "handlebars": "^4.0.6",
+    "html-pdf": "^2.1.0",
+    "marked": "^0.3.6"
+  }
+}

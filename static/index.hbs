@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Moonlight Core</title>
+    <link href="res/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="nav"></nav>
+    <div class="content">
+        {{{content}}}
+    </div>
+
+    <script src="res/jquery-3.2.1.min.js"></script>
+
+    <script>
+        var result = $('<div/>');
+        var curDepth = 0;
+        var headers = $('*').filter(function() {
+            return this.tagName.match(/h\d/i);
+        }).get();
+
+        console.log(headers);
+
+        $.each(headers, function () {
+            var a = $('<a/>').text($(this).text()).attr('href', '#' + $(this).attr('id'));
+            var li = $('<li/>').append(a);
+            var depth = parseInt(this.tagName.substring(1));
+            console.log(depth);
+            if (depth > curDepth) {
+                result.append($('<ol/>').append(li));
+                result = li;
+            } else if (depth < curDepth) {
+                result.parents('ol:eq(' + (curDepth - depth) + ')').append(li);
+                result = li;
+            } else {
+                result.parent().append(li);
+                result = li;
+            }
+            curDepth = depth;
+        });
+        result = result.parents('ol:last');
+
+        $('nav').append(result)
+    </script>
+</body>
+
+</html>
