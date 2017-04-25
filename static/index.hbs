@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Moonlight Core</title>
     <link href="res/style.css" rel="stylesheet">
 </head>
@@ -44,6 +46,11 @@
         result = result.parents('ol:last');
 
         $('nav').append(result)
+
+        $('nav').click(function(){
+            $(this).toggleClass('expanded');
+            $(this).children().toggleClass('expanded');
+        });
     </script>
 </body>
 
