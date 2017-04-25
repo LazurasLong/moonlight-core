@@ -41,6 +41,10 @@ nav > ol {
     visibility: hidden;
 }
 
+nav ol {
+    list-style: none;
+}
+
 ol.expanded {
     visibility: visible;
     padding-bottom: 50px;

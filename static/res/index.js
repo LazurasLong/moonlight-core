@@ -4,13 +4,10 @@ var headers = $('*').filter(function() {
     return this.tagName.match(/h\d/i);
 }).get();
 
-console.log(headers);
-
 $.each(headers, function (index) {
     var a = $('<a/>').text($(this).text()).attr('href', '#' + $(this).attr('id'));
     var li = $('<li/>').append(a);
     var depth = parseInt(this.tagName.substring(1));
-    console.log(depth);
     if (depth > curDepth) {
         result.append($('<ol/>').append(li));
         result = li;

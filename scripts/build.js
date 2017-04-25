@@ -21,8 +21,8 @@ if (!fs.existsSync("./build")) {
     fs.mkdirSync("./build");
 }
 
-fs.readdirSync("./source").forEach(function (file, index) {
-    var filePath = path.join("./source", file);
+fs.readdirSync("./text").forEach(function (file, index) {
+    var filePath = path.join("./text", file);
     var fileName = file.slice(0, -3);
     var data = fs.readFileSync(filePath, { encoding: "utf8" });
     output += marked(data);
