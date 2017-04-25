@@ -106,20 +106,25 @@ td {
     }
     nav {
         height: 30px;
-        width: 30px;
-        top: 11px;
-        left: 11px;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        width: auto;
+        background-size: 3%;
         border: #bfc0c8 3px solid;
     }
     nav.expanded {
-        top: 0px;
-        bottom: 0px;
-        right: 0px;
-        left: 0px;
-        border: 0;
+        top: 20px;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        border: #bfc0c8 3px solid;
         padding: 20px 30px 0px 10px;
     }
     ol.expanded {
         padding-bottom: 20px;
+        display: table;
+        margin: 0 auto;
+        font-size: 12pt;
     }
 }
