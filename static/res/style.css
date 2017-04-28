@@ -1,8 +1,8 @@
 body {
+    font-family: sans-serif;
     font-size: 1.125em;
     line-height: 1.6;
     color: #474747;
-    font-family: sans-serif;
 }
 
 a {
@@ -16,22 +16,22 @@ a {
 }
 
 nav {
+    position: fixed;
+    z-index: 9999;
+    top: 20px;
+    left: 20px;
     width: 50px;
     height: 50px;
-    position: fixed;
-    left: 20px;
-    top: 20px;
-    border: #bfc0c8 4px solid;
-    z-index: 9999;
-    background: url(menu.svg) no-repeat center center;
-    background-size: 70%;
-    background-color: white;
     transition: 0.2s;
+    border: #BFC0C8 4px solid;
+    background: url(menu.svg) no-repeat center center;
+    background-color: white;
+    background-size: 70%;
 }
 
 nav:hover {
-    background-color: #ececec;
     transition: 0.2s;
+    background-color: #ECECEC;
 }
 
 nav:focus,
@@ -40,13 +40,13 @@ nav:active {
 }
 
 nav.expanded {
-    padding: 50px 70px 0px 40px;
-    width: auto;
-    overflow-y: scroll;
-    height: auto;
     bottom: 20px;
-    background: white;
+    overflow-y: scroll;
+    width: auto;
+    height: auto;
+    padding: 50px 70px 0 40px;
     transition: 0.2s;
+    background: white;
 }
 
 nav > ol {
@@ -68,9 +68,9 @@ h3,
 h4,
 h5,
 h6 {
+    position: relative;
     display: block;
     margin: 20px 0;
-    position: relative;
 }
 
 h1 {
@@ -78,12 +78,12 @@ h1 {
 }
 
 h1::before {
-    content: '#';
-    display: block;
     position: absolute;
     left: -1em;
-    opacity: 0.2;
+    display: block;
+    content: '#';
     text-align: right;
+    opacity: 0.2;
 }
 
 h2 {
@@ -91,12 +91,12 @@ h2 {
 }
 
 h2::before {
-    content: '##';
-    display: block;
     position: absolute;
     left: -1.7em;
-    opacity: 0.2;
+    display: block;
+    content: '##';
     text-align: right;
+    opacity: 0.2;
 }
 
 h3 {
@@ -104,12 +104,12 @@ h3 {
 }
 
 h3::before {
-    content: '###';
-    display: block;
     position: absolute;
     left: -2.4em;
-    opacity: 0.2;
+    display: block;
+    content: '###';
     text-align: right;
+    opacity: 0.2;
 }
 
 h4 {
@@ -117,12 +117,12 @@ h4 {
 }
 
 h4::before {
-    content: '####';
-    display: block;
     position: absolute;
     left: -3em;
-    opacity: 0.2;
+    display: block;
+    content: '####';
     text-align: right;
+    opacity: 0.2;
 }
 
 h5 {
@@ -130,12 +130,12 @@ h5 {
 }
 
 h5::before {
-    content: '#####';
-    display: block;
     position: absolute;
     left: -3.7em;
-    opacity: 0.2;
+    display: block;
+    content: '#####';
     text-align: right;
+    opacity: 0.2;
 }
 
 h6 {
@@ -143,12 +143,12 @@ h6 {
 }
 
 h6::before {
-    content: '######';
-    display: block;
     position: absolute;
     left: -4.2em;
-    opacity: 0.2;
+    display: block;
+    content: '######';
     text-align: right;
+    opacity: 0.2;
 }
 
 li {
@@ -156,8 +156,8 @@ li {
 }
 
 table {
-    border-collapse: collapse;
     margin-bottom: 10px;
+    border-collapse: collapse;
 }
 
 tr {
@@ -175,30 +175,30 @@ td {
         font-size: 0.9em;
         line-height: 1.5;
     }
-    .content{
+    .content {
         padding: 90px;
     }
     nav {
-        height: 30px;
         top: 20px;
-        left: 20px;
         right: 20px;
+        left: 20px;
         width: auto;
+        height: 30px;
+        border: #BFC0C8 3px solid;
         background-size: 3%;
-        border: #bfc0c8 3px solid;
     }
     nav.expanded {
         top: 20px;
-        bottom: 20px;
         right: 20px;
+        bottom: 20px;
         left: 20px;
-        border: #bfc0c8 3px solid;
-        padding: 20px 30px 0px 10px;
+        padding: 20px 30px 0 10px;
+        border: #BFC0C8 3px solid;
     }
     ol.expanded {
-        padding-bottom: 20px;
+        font-size: 12pt;
         display: table;
         margin: 0 auto;
-        font-size: 12pt;
+        padding-bottom: 20px;
     }
 }
