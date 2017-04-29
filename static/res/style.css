@@ -176,7 +176,7 @@ td {
         line-height: 1.5;
     }
     .content {
-        padding: 90px;
+        padding: 90px 50px;
     }
     nav {
         top: 20px;
@@ -185,7 +185,7 @@ td {
         width: auto;
         height: 30px;
         border: #BFC0C8 3px solid;
-        background-size: 3%;
+        background-size: 20px 20px;
     }
     nav.expanded {
         top: 20px;
@@ -200,5 +200,14 @@ td {
         display: table;
         margin: 0 auto;
         padding-bottom: 20px;
+    }
+    h1::before,
+    h2::before,
+    h3::before,
+    h4::before,
+    h5::before,
+    h6::before {
+        content: '';
+        display: none;
     }
 }
