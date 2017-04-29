@@ -1,0 +1,303 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1.2in]{geometry}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\date{}
+
+\begin{document}
+
+\section{Spells}\label{spells}
+
+\subsection{Light}\label{light}
+
+\textbf{Level:} 1
+
+\textbf{Mana:} 5
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Creates a small orb of light, roughly
+\textasciitilde{}5cm in diameter. The orb gives off around 30 lux.
+
+\subsection{Speed}\label{speed}
+
+\textbf{Level:} 1
+
+\textbf{Mana:} 5
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Infuses a creature with speed. For the next 10
+minutes, they move at twice their normal speed.
+
+\subsection{Awareness}\label{awareness}
+
+\textbf{Level:} 1
+
+\textbf{Mana:} 10
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Infuses a creature with increased awareness. For the
+next 10 minutes, they gain a +1d10 to checks involving awareness or
+perception.
+
+\subsection{Heal}\label{heal}
+
+\textbf{Level:} 1
+
+\textbf{Mana:} 15
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Heals two wounds from any non-mortally injured
+location on a creature.
+
+\subsection{Summon Armour}\label{summon-armour}
+
+\textbf{Level:} 3
+
+\textbf{Mana:} 20
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Summons a suit of armour. Quality of armour determined
+by degrees of success.
+
+\subsection{Explosion}\label{explosion}
+
+\textbf{Level:} 5
+
+\textbf{Mana:} 30
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Creates an explosion with 1d10 meters radius. Deals
+damage with DP50 to all creatures within blast radius.
+
+\subsection{Arc Lightning}\label{arc-lightning}
+
+\textbf{Level:} 5
+
+\textbf{Mana:} 25
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Create electricity which arcs with ease from living
+being to living being. Deals damage with 20DP to all creatures within 5
+meters of each other. Conductive objects can be used as a medium to
+extend the lightning's reach.
+
+\subsection{Healing Aura}\label{healing-aura}
+
+\textbf{Level:} 2
+
+\textbf{Mana:} 25
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Creates an aura with a radius of 10 meters. Heals two
+random wounds randomly from all creatures within the aura.
+
+\subsection{Ensnare}\label{ensnare}
+
+\textbf{Level:} 1
+
+\textbf{Mana:} 20
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Traps an enemy in pure magical energy for 1d10 turns.
+During this time, they cannot take actions, but remain fully conscious.
+
+\subsection{Spark of Anger}\label{spark-of-anger}
+
+\textbf{Level:} 4
+
+\textbf{Mana:} 20
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Deals damage with DP10 to the target. Triggers an
+enrage, which gives the target an additional +1d10 to all attacks and
+damage for 10 turns.
+
+\subsection{Flare}\label{flare}
+
+\textbf{Level:} 2
+
+\textbf{Mana:} 10
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Launches a bright flare in a direction with an initial
+velocity of 30 m/s. The flare gives off around 300 lux.
+
+\subsection{Glaciate}\label{glaciate}
+
+\textbf{Level:} 9
+
+\textbf{Mana:} 20
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Entombs a creature or object in ice. They are disabled
+until it melts.
+
+\subsection{Poison Touch}\label{poison-touch}
+
+\textbf{Level:} 3
+
+\textbf{Mana:} 15
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Infuses a target with poison. They take poison damage
+with DP30 each turn for 5 turns.
+
+\subsection{Gravity Well}\label{gravity-well}
+
+\textbf{Level:} 6
+
+\textbf{Mana:} 35
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Creates a gravity well which sucks all objects within
+20 meters into it. The gravitational force is equivalent to 0.5g.
+
+\subsection{Ray of Fire}\label{ray-of-fire}
+
+\textbf{Level:} 4
+
+\textbf{Mana:} 25
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Creates a beam which lights everything it touches on
+fire. It deals damage with DP40 to all creatures hit, and inflicts an
+additional DP30 burning damage for 5 turns.
+
+\subsection{Scalding Stream}\label{scalding-stream}
+
+\textbf{Level:} 5
+
+\textbf{Mana:} 30
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Creates a beam of boiling water. Deals damage with
+DP60 to all creatures hit, and inflicts an additional DP30 burning
+damage for 2 turns.
+
+\subsection{Aggravate}\label{aggravate}
+
+\textbf{Level:} 3
+
+\textbf{Mana:} 25
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Triggers enrage, which gives the target an additional
++1d10 to all attacks and damage for 10 turns.
+
+\subsection{Banish to Dust}\label{banish-to-dust}
+
+\textbf{Level:} 4+
+
+\textbf{Mana:} 40
+
+\textbf{Casting time:} 3 turns, Instant
+
+\textbf{Effects:} Disintegrates an object. Size of object depends on
+casting level. Cannot target creatures larger than small in size. Can
+never target humans.
+
+\subsection{Dimension Gate}\label{dimension-gate}
+
+\textbf{Level:} 12
+
+\textbf{Mana:} 70
+
+\textbf{Casting time:} 6 turns, 10 minutes
+
+\textbf{Effects:} Creates a dimension gate.
+
+\subsection{Portal}\label{portal}
+
+\textbf{Level:} 2
+
+\textbf{Mana:} 35
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} Creates a portal to a certain location. The
+destination may not be the intended target, depending on the degrees of
+failure or success.
+
+\subsection{Hypnosis}\label{hypnosis}
+
+\textbf{Level:} 9
+
+\textbf{Mana:} 40
+
+\textbf{Casting time:} Instant
+
+\textbf{Effects:} The target makes a MND save. On failure, they fall
+under the caster's control for 1d10 minutes. Degree of control varies
+depending on degrees of failure or success. Cannot be used on the same
+person again within 48 hours if failed.
+
+\end{document}

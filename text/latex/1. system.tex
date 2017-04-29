@@ -1,0 +1,287 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1.2in]{geometry}
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\date{}
+
+\begin{document}
+
+\section{System}\label{system}
+
+\subsection{Game Master}\label{game-master}
+
+The person in charge of the game is known as the Game Master. This
+system document assumes you are familiar to traditional tabletop
+Role-playing games.
+
+It must be stressed that the Game Master's word is final and absolute.
+They are the person in charge of the game, and whatever they say counts
+from a rules perspective. There will be parts of the game when a Game
+Master's judgement is necessary.
+
+\subsection{System guidelines and
+functions}\label{system-guidelines-and-functions}
+
+The system has a broad set of general rules-of-thumb to follow. All the
+following rules should be taken as a guideline, and the Game Master's
+word may override them.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Specific rules take precedence over general rules. If there are
+  contractions, a specific rule should be used over a general one.
+\item
+  When rounding is necessary, round downwards.
+\end{enumerate}
+
+\subsection{Dice}\label{dice}
+
+The base dice used for the system is the \emph{d10}, or a 10-sided dice.
+A percentile roll, the \emph{d100}, may be made by using 2d10, treating
+the first roll as the value of the tenth digit, and the second roll as
+the value of the ones digit.
+
+\subsection{Characteristic scores}\label{characteristic-scores}
+
+Characteristic scores are key to a character's basic construction. They
+are an abstraction of a character's basic abilities and characteristics,
+of everything from their physical to mental attributes, to weapon
+skills.
+
+The following characteristic scores exist.
+
+\subsubsection{Strength}\label{strength}
+
+\emph{Abbreviated as STR.}
+
+\textbf{Strength} is a character's basic ability to achieve physical
+feats. These are mostly those that involve feats of strength, such as
+lifting, or carrying items, but also include acts such as climbing, and
+jumping.
+
+Unarmed melee, and brute melee weapons utilise STR rolls.
+
+\subsubsection{Melee Weapon Strength}\label{melee-weapon-strength}
+
+\emph{Abbreviated as MWS.}
+
+\textbf{Melee weapon strength} represents a character's familiarity, and
+proficiency in utilising complex melee weapons.
+
+All non-unarmed, and brute melee weapons utilise MWS rolls.
+
+\subsubsection{Agility}\label{agility}
+
+\emph{Abbreviated as AGL.}
+
+\textbf{Agility} represents a character's dexterity, physical
+flexibility, and nimbleness. A character's initiative is also determined
+by AGL.
+
+Unarmed ranged weapons utilise AGL rolls.
+
+\subsubsection{Ranged Weapon Strength}\label{ranged-weapon-strength}
+
+\emph{Abbreviated as RWS.}
+
+\textbf{Ranged weapon strength} represents a character's familiarity,
+and proficiency in utilising complex ranged weapons.
+
+All non-unarmed ranged weapons utilise RWS rolls.
+
+\subsubsection{Toughness}\label{toughness}
+
+\emph{Abbreviated as TGH.}
+
+\textbf{Toughness} represents a character's physical resilience and
+natural defence capabilities. This covers a wide range of different
+situations, from resisting status effects such as poison, to retaining
+consciousness after sustaining damage, to surviving when potentially
+lethal damage is taken.
+
+\subsubsection{Mind}\label{mind}
+
+\emph{Abbreviated as MND.}
+
+\textbf{Mind} is a abstraction of mental processes and abilities. It
+covers a character's intelligence, their ability to process and retain
+information, and their mental capacity and willpower. MND is also used
+when resisting mental status effects, and to resist damage to memory or
+mental functions.
+
+\subsubsection{Charisma}\label{charisma}
+
+\emph{Abbreviated as CHA.}
+
+\textbf{Charisma} is a character's ability to charm and coerce. This may
+be derived from an innate ability to manipulate, but may involve other
+characteristics, including a character's physical attractiveness, and a
+character's ability to speak.
+
+\subsubsection{Perception}\label{perception}
+
+\emph{Abbreviated as PER.}
+
+\textbf{Perception} is a character's ability to notice and perceive
+their surroundings. This include complex uses of senses, the ability to
+detect small details, and the ability to passively, and actively detect
+other characters' actions.
+
+\subsection{Degrees of Success and
+Failure}\label{degrees-of-success-and-failure}
+
+A single degree of success is counted for every ten a d100 roll beats a
+base difficulty. For example, if a check difficulty was 50, and the d100
+roll was 30, we would say that roll had 2 degrees of success.
+
+The degree of failure is similar, but counts every ten a d100 roll is
+above a base difficulty. If a check difficulty was 50, and the d100 roll
+was 72, we would say that roll had 2 degrees of failure.
+
+\subsection{Checks}\label{checks}
+
+Checks are split into two major types.
+
+\subsubsection{Basic Checks}\label{basic-checks}
+
+All basic checks are made in a similar fashion. In order to make a
+check, first determine a the check's difficulty. A basic, challenging
+difficulty check is equal to the character's relevant characteristic
+point.
+
+The following chart may be used to help determine the difficulty of
+checks. Please note modifiers are applied to the difficulty of the
+check, not the roll.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Difficulty & Modifier\tabularnewline
+\midrule
+\endhead
+Trivial & +40\tabularnewline
+Simple & +30\tabularnewline
+Routine & +20\tabularnewline
+Standard & +10\tabularnewline
+Challenging & 0\tabularnewline
+Hard & -10\tabularnewline
+Very Hard & -20\tabularnewline
+Painstaking & -30\tabularnewline
+Impossible & -40\tabularnewline
+\bottomrule
+\end{longtable}
+
+After a difficulty has been determined, roll a d100 and compare the roll
+to the difficulty. If the roll is lower than the difficulty, the check
+succeeds.
+
+\subsubsection{Skill Checks}\label{skill-checks}
+
+\textbf{Skill checks} are made when a character utilises a known skill.
+Making a skill check is the same as making a basic check.
+
+\subsubsection{Characteristic Checks}\label{characteristic-checks}
+
+\textbf{Characteristic checks} are made using the base characteristic of
+a character. The mechanics for characteristic checks vary depending on
+the situation.
+
+\paragraph{Untrained skill checks}\label{untrained-skill-checks}
+
+Untrained skill checks are made when a character does not possess a
+skill, but wishes to make a check untrained. In these circumstances, the
+rules are the same for making a trained skill check, but all modifies
+receive an additional -10.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Difficulty & Modifier\tabularnewline
+\midrule
+\endhead
+Trivial & +30\tabularnewline
+Simple & +20\tabularnewline
+Routine & +10\tabularnewline
+Standard & 0\tabularnewline
+Challenging & -10\tabularnewline
+Hard & -20\tabularnewline
+Very Hard & -30\tabularnewline
+Painstaking & -40\tabularnewline
+Impossible & -50\tabularnewline
+\bottomrule
+\end{longtable}
+
+\paragraph{Other Characteristic
+Checks}\label{other-characteristic-checks}
+
+Characteristic checks are also made in other situations, such as when
+resisting status effects, rolling in combat, and most other
+circumstances when skills do not apply. Making these checks is the same
+as making a basic check.
+
+\subsubsection{Opposing Checks}\label{opposing-checks}
+
+An opposing check is made when a character uses a skill or
+characteristic against another character. In these situations, a basic
+check is made for both characters with the applicable modifiers. The
+character with the least degrees of failure, or the most degrees of
+success wins.
+
+In an opposing check, it is impossible for both parties to fail, or
+succeed.
+
+\end{document}

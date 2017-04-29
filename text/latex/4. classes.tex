@@ -1,0 +1,181 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1.2in]{geometry}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\date{}
+
+\begin{document}
+
+\section{Classes}\label{classes}
+
+Classes are key to a character's basic build. They may provide skills,
+equipment, and additional features and abilities.
+
+\subsection{Class Generalisation}\label{class-generalisation}
+
+\subsubsection{Skills}\label{skills}
+
+A class will typically provide training in skills.
+
+\subsubsection{Equipment}\label{equipment}
+
+A class will typically provide a set of equipment.
+
+\subsubsection{Class Feature}\label{class-feature}
+
+A class will typically provide a class feature. A class feature is an
+ability or bonus available to all users of that class from the
+beginning.
+
+\subsection{Channeller}\label{channeller}
+
+\textbf{Skills:} Gain any five skills.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  One piece of light armour \emph{or} A dagger.
+\item
+  A casting item.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} Gain +5 in any characteristic.
+
+\subsection{Fighter}\label{fighter}
+
+\textbf{Skills:} Gain four STR, TGH or AGL skills, one MDN or CHA skill,
+and one PER skill.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  One piece of medium armour \emph{or} One piece of light armour and any
+  ranged weapon.
+\item
+  Any melee weapon and a shield \emph{or} Two melee weapons.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} Gain +10 in MWS or RWS.
+
+\subsection{Magician}\label{magician}
+
+\textbf{Skills:} Gain any five skills.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  One piece of light armour \emph{or} A dagger.
+\item
+  A casting item.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} Gain +5 in any characteristic.
+
+\subsection{None}\label{none}
+
+\textbf{Skills:} Gain any six skills.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Any weapon.
+\item
+  Any armour.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} Gain +10 in any characteristic.
+
+\subsection{Rogue}\label{rogue}
+
+\textbf{Skills:} Gain two AGL skills, two MDN or CHA skill, and two PER
+skill.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  One piece of light armour.
+\item
+  Any light melee weapon \emph{or} Any light ranged weapon.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} Gain training in Sleight of Hand \emph{or}
+Stealth \emph{or} +10 in AGL or PER.
+
+\end{document}

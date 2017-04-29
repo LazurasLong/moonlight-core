@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#combat">Combat</a><ul>
+<li><a href="#damage-system">Damage System</a><ul>
+<li><a href="#wounds">Wounds</a></li>
+<li><a href="#mortal-damage">Mortal Damage</a></li>
+<li><a href="#weapons">Weapons</a></li>
+<li><a href="#armour">Armour</a></li>
+<li><a href="#locational-damage">Locational Damage</a></li>
+</ul></li>
+<li><a href="#modifiers">Modifiers</a><ul>
+<li><a href="#status-effects">Status Effects</a></li>
+</ul></li>
+<li><a href="#combat-flow">Combat Flow</a><ul>
+<li><a href="#initiating-combat">Initiating Combat</a></li>
+<li><a href="#turn-actions">Turn actions</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="combat">Combat</h1>
+<p>Combat is designed to be challenging and deadly. It utilises a damage model based on wounds, rather than hit points.</p>
+<h2 id="damage-system">Damage System</h2>
+<h3 id="wounds">Wounds</h3>
+<p>Each location tracks wounds. Bodily locations include:</p>
+<ul>
+<li>Head</li>
+<li>Right arm</li>
+<li>Left arm</li>
+<li>Torso</li>
+<li>Right leg</li>
+<li>Left leg</li>
+</ul>
+<p>Each location may sustain three types of damage.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Flesh-wounds:</strong> A hit that results in no immediate danger. However, they can build up. Three flesh-wounds create an injury.</li>
+<li><strong>Injury:</strong> A strike that is damaging. Each injury on a location grants a -5 modifier to utilising that location.</li>
+<li><strong>Critical Injury:</strong> An injury that disables the location entirely. If this is to the head or torso, it creates a mortal injury.
+<ul>
+<li>Upon receiving a critical injury, make a TGN check. On failure, the location is removed. This does not apply to the head or torso.</li>
+<li>The number of injuries to each location needed to form a Critical Injury on a normal human, or human-like creature:
+<ul>
+<li>Arms: 10</li>
+<li>Legs: 10</li>
+<li>Head: 5</li>
+<li>Torso: 20</li>
+</ul></li>
+</ul></li>
+</ol>
+<h3 id="mortal-damage">Mortal Damage</h3>
+<p>Once a character receives a mortal injury, they become unable to function. If they are not stabilised within two turns, they must start rolling toughness checks every turn. If at any point they fail this check, they die.</p>
+<h3 id="weapons">Weapons</h3>
+<p>Each weapon possesses a percentile chance of inflicting an injury. This is represented by a weapon’s DP, or Damage Percentile. If a roll for damage beats (comes below) this value, an injury is inflicted.</p>
+<p>If the roll for damage fails, a flesh-wound is inflicted instead.</p>
+<p>If the roll surpasses four degrees of success, it automatically inflicts a critical injury.</p>
+<h3 id="armour">Armour</h3>
+<p>Armour is available for each location. A piece of armour will possess an armour modifier. The armour modifier is added to the difficulty when rolling to hit.</p>
+<h3 id="locational-damage">Locational Damage</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Region</th>
+<th>Dice</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Head</td>
+<td>1-10</td>
+</tr>
+<tr class="even">
+<td>Right arm</td>
+<td>11-20</td>
+</tr>
+<tr class="odd">
+<td>Left arm</td>
+<td>21-30</td>
+</tr>
+<tr class="even">
+<td>Torso</td>
+<td>31-70</td>
+</tr>
+<tr class="odd">
+<td>Right leg</td>
+<td>71-85</td>
+</tr>
+<tr class="even">
+<td>Left leg</td>
+<td>86-00</td>
+</tr>
+</tbody>
+</table>
+<h2 id="modifiers">Modifiers</h2>
+<h3 id="status-effects">Status Effects</h3>
+<p>Status effects are additional effects applied onto characters. These effects may be beneficial, or negative.</p>
+<ul>
+<li>Blindness</li>
+<li>Charmed</li>
+<li>Deafness</li>
+<li>Fatigue</li>
+<li>Fright</li>
+<li>Incapacitation</li>
+<li>Inspiration</li>
+<li>Paralysis</li>
+<li>Poison</li>
+<li>Rush</li>
+<li>Stun</li>
+</ul>
+<h2 id="combat-flow">Combat Flow</h2>
+<h3 id="initiating-combat">Initiating Combat</h3>
+<p>When initiating combat, all character should roll initiative equal to (x)d10, where x is equal to the tenth digit of the AGL score.</p>
+<p>If the attack is unexpected by the defenders, each attacker receives (in arbitrary order) one extra full turn before initiative is taken into account.</p>
+<h3 id="turn-actions">Turn actions</h3>
+<p>Turns are comprised of two actions. Unless otherwise specified, a non-movement action immediately ends the turn.</p>
+<ul>
+<li><strong>Move:</strong>
+<ul>
+<li>Move within the movement speed of the character.</li>
+</ul></li>
+<li><strong>Sprint:</strong>
+<ul>
+<li>Move twice the movement speed of the character. This ends the turn.</li>
+</ul></li>
+<li><strong>Defend:</strong>
+<ul>
+<li>Defend against the next attack. An attack the following turn has a -10 to hitting the defender.</li>
+</ul></li>
+<li><strong>Ranged / Melee Attack:</strong>
+<ul>
+<li>Make the appropriate roll (MWS or RWS) to hit the enemy. The attacker may choose to make an aimed shot at a -20 to hit.</li>
+<li>Roll a d100 to determine the location hit. Refer to Locational Damage for chart.</li>
+<li>On success, make a roll against the weapon’s DP.</li>
+<li>Repeat roll to hit and damage for each attack(s) per action.</li>
+</ul></li>
+<li><strong>Magic Attack:</strong>
+<ul>
+<li>Make a magic roll based on the type of magic user.</li>
+<li>On success, apply spell effects to target. The target may make an agility roll to dodge (MOD -20) if their AGL score is above 30.</li>
+</ul></li>
+<li><strong>Other Actions:</strong>
+<ul>
+<li>Use any other action that may be used outside of combat.</li>
+</ul></li>
+</ul>
+</body>
+</html>
