@@ -6,6 +6,6 @@ Project Moonlight is also a _living system_, meaning that many aspects of the sy
 
 You'll find the markdown source, broke down into chapters, in the [source](source) folder. The [build](build) folder contains a shell script to build the source into more easily consumable formats. Building requires [pandoc](http://pandoc.org/), and the relevant dependencies for the format.
 
-The Moonlight Core Ruleset is available under the [CC0-1.0 license](license.txt). This means it is under the public domain, available for re-use and re-distribution, free of charge, no credit neccessary.
+The Moonlight Core Ruleset is available under the [CC0-1.0](COPYING). This means it is under the public domain, available for re-use and re-distribution, free of charge, no credit neccessary.
 
-All relevant code is also available under the [CC0-1.0 license](license.txt).
+All relevant code is also available under the [CC0-1.0](COPYING).
