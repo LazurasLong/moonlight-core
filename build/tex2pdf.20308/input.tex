@@ -1,0 +1,892 @@
+\documentclass[12pt,]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=3cm]{geometry}
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\date{}
+
+\begin{document}
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{System}\label{system}
+
+\subsection{Dice}\label{dice}
+
+The base dice used for the system is the \emph{d10}, or a 10-sided dice.
+A percentile roll, the \emph{d100}, may be made by using 2d10, treating
+the first roll as the value of the tenth digit, and the second roll as
+the value of the ones digit. A 10 rolled for the tenth digit represents
+a 0, unless both are rolled 10, in which case they collectively form a
+100.
+
+\subsection{Characteristic scores}\label{characteristic-scores}
+
+\textbf{Characteristic scores} are key to a character's basic
+construction. They are an abstraction of a character's basic abilities
+and characteristics, of everything from their physical to mental
+attributes, to weapon skills.
+
+The following characteristics exist.
+
+\subsubsection{Melee weapon strength}\label{melee-weapon-strength}
+
+\emph{Abbreviated as MWS.}
+
+\textbf{Melee weapon strength} represents a character's familiarity and
+proficiency in utilising melee weapons.
+
+All melee weapons that are not classified as \emph{Unarmed Melee} or
+\emph{Brute Melee} utilise MWS rolls.
+
+\subsubsection{Ranged weapon strength}\label{ranged-weapon-strength}
+
+\emph{Abbreviated as RWS.}
+
+\textbf{Ranged weapon strength} represents a character's familiarity and
+proficiency in utilising ranged weapons.
+
+All ranged weapons that are not classified as \emph{Unarmed Melee}
+utilise RWS rolls.
+
+\subsubsection{Strength}\label{strength}
+
+\emph{Abbreviated as STR.}
+
+\textbf{Strength} is a character's basic ability to achieve physical
+feats. These are mostly those that involve feats of strength, such as
+lifting, or carrying items, but also include acts such as climbing, and
+jumping.
+
+\emph{Unarmed Melee}, and \emph{Brute Melee} weapons also utilise STR
+rolls.
+
+\subsubsection{Agility}\label{agility}
+
+\emph{Abbreviated as AGL.}
+
+\textbf{Agility} represents a character's dexterity, physical
+flexibility, and nimbleness. A character's initiative is also determined
+by AGL.
+
+\emph{Unarmed Ranged} weapons also utilise AGL rolls.
+
+\subsubsection{Toughness}\label{toughness}
+
+\emph{Abbreviated as TGH.}
+
+\textbf{Toughness} represents a character's physical resilience and
+natural defence capabilities. This covers a wide range of different
+situations, from resisting status effects such as poison, to retaining
+consciousness after sustaining damage, to surviving when potentially
+lethal damage is taken.
+
+\subsubsection{Mind}\label{mind}
+
+\emph{Abbreviated as MND.}
+
+\textbf{Mind} is a abstraction of mental processes and abilities. It
+covers a character's intelligence, their ability to process and retain
+information, and their mental capacity and willpower. MND is also used
+when resisting mental status effects, and to resist damage to memory or
+mental functions.
+
+\subsubsection{Charisma}\label{charisma}
+
+\emph{Abbreviated as CHA.}
+
+\textbf{Charisma} is a character's ability to charm and coerce. This may
+be derived from an innate ability to manipulate others, but may involve
+other characteristics, including a character's physical attractiveness,
+and a character's ability to speak publicly.
+
+\subsubsection{Perception}\label{perception}
+
+\emph{Abbreviated as PER.}
+
+\textbf{Perception} is a character's ability to notice and perceive
+their surroundings. This include complex uses of senses, the ability to
+detect small details, and the ability to passively, and actively detect
+other characters' actions.
+
+\subsection{Checks}\label{checks}
+
+\subsubsection{Basic \& characteristic
+checks}\label{basic-characteristic-checks}
+
+\textbf{Basic checks} are all made in a similar fashion. In order to
+make a check, first determine a the check's difficulty. A basic,
+challenging difficulty check is equal to the character's relevant
+characteristic point. This is also known as a \textbf{characteristic
+check}.
+
+Characteristic checks are also made in other situations, such as when
+resisting status effects, taking special actions in combat, and most
+other circumstances when skills do not apply. Making these checks is the
+same as making a basic check.
+
+\emph{Check difficulties for basic and trained skill checks and their
+corresponding modifiers. Please note modifiers in general are applied to
+the difficulty of the check, not the roll.}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Difficulty & Modifier\tabularnewline
+\midrule
+\endhead
+Trivial & +40\tabularnewline
+Simple & +30\tabularnewline
+Routine & +20\tabularnewline
+Standard & +10\tabularnewline
+Challenging & 0\tabularnewline
+Hard & -10\tabularnewline
+Very Hard & -20\tabularnewline
+Painstaking & -30\tabularnewline
+Impossible & -40\tabularnewline
+\bottomrule
+\end{longtable}
+
+After a difficulty has been determined, roll a d100 and compare the roll
+to the difficulty. If the roll is lower than the difficulty, the check
+succeeds.
+
+\subsubsection{Skill checks}\label{skill-checks}
+
+\textbf{Skill checks} are made when a character utilises a known skill.
+Making a skill check is the same as making a basic check, though the
+player may choose which characteristic they wish to invoke. The results
+and means through which an action is taken as a result may be affected
+by the characteristic utilised.
+
+\subsubsection{Untrained skill checks}\label{untrained-skill-checks}
+
+\textbf{Untrained skill checks} are made when a character does not
+possess a skill, but wishes to make a check untrained. In these
+circumstances, the rules are the same for making a trained skill check,
+but all modifies receive an additional -10.
+
+\emph{Check difficulties for untrained skill checks.}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Difficulty & Modifier\tabularnewline
+\midrule
+\endhead
+Trivial & +30\tabularnewline
+Simple & +20\tabularnewline
+Routine & +10\tabularnewline
+Standard & 0\tabularnewline
+Challenging & -10\tabularnewline
+Hard & -20\tabularnewline
+Very Hard & -30\tabularnewline
+Painstaking & -40\tabularnewline
+Impossible & -50\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsubsection{Opposing checks}\label{opposing-checks}
+
+\textbf{Opposing checks} are made when a character uses a skill or
+characteristic against another character. In these situations, a basic
+check is made for both characters with the applicable modifiers. The
+character closest to success, or with the greatest success, succeeds the
+check.
+
+In an opposing check, it is impossible for both parties to fail or
+succeed.
+
+\subsection{Skills}\label{skills}
+
+A list of skills in the basic system.
+
+\begin{itemize}
+\tightlist
+\item
+  Acrobatics
+\item
+  Animal Handling
+\item
+  Appraise
+\item
+  Arcana
+\item
+  Artificing
+\item
+  Athletics
+\item
+  Barter
+\item
+  Bluff
+\item
+  Bureaucracy
+\item
+  Business
+\item
+  Calligraphy
+\item
+  Charm
+\item
+  Climb
+\item
+  Contortion
+\item
+  Courting
+\item
+  Crafting
+\item
+  Culture
+\item
+  Deception
+\item
+  Deduce Motive
+\item
+  Detect Trap
+\item
+  Diplomacy
+\item
+  Disable Device
+\item
+  Disguise
+\item
+  Drawing
+\item
+  Ecology
+\item
+  Engineering
+\item
+  Escape
+\item
+  Etiquette
+\item
+  Forgery
+\item
+  Geography
+\item
+  History
+\item
+  Insight
+\item
+  Instruction
+\item
+  Intimidation
+\item
+  Investigation
+\item
+  Leadership
+\item
+  Linguistics
+\item
+  Lip Reading
+\item
+  Logic
+\item
+  Martial Arts
+\item
+  Medicine
+\item
+  Nature
+\item
+  Navigation
+\item
+  Painting
+\item
+  Penmanship
+\item
+  Performance
+\item
+  Persuasion
+\item
+  Philosophy
+\item
+  Politics
+\item
+  Psychology
+\item
+  Religion
+\item
+  Ride
+\item
+  Sail
+\item
+  Sleight of Hand
+\item
+  Smithing
+\item
+  Stealth
+\item
+  Strategy
+\item
+  Surgery
+\item
+  Survival
+\item
+  Swim
+\item
+  Tracking
+\end{itemize}
+
+\subsubsection{Skill progression}\label{skill-progression}
+
+Skills have levels that go from 1-10. Each level above 1 provides an
+additional +5 to checks against that skill. A basic training in a skill
+provides a level 1 skill. In order to progress levels, upgrade points
+(UP) may be spent.
+
+1 UP should cost 1000 EXP.
+
+\emph{Number of UP needed to progress from each level}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Level & Cost (UP)\tabularnewline
+\midrule
+\endhead
+1 & 2\tabularnewline
+2 & 4\tabularnewline
+3 & 6\tabularnewline
+4 & 12\tabularnewline
+5 & 20\tabularnewline
+6 & 32\tabularnewline
+7 & 42\tabularnewline
+8 & 84\tabularnewline
+9 & 136\tabularnewline
+\bottomrule
+\end{longtable}
+
+\section{Combat}\label{combat}
+
+\subsection{Damage system}\label{damage-system}
+
+The \textbf{Damage system} is designed to be challenging and deadly. It
+utilises a damage model based on wounds, rather than hit points.
+
+\subsubsection{Wounds}\label{wounds}
+
+Each location tracks \textbf{wounds}. These represent physical damage
+done to a location. Body locations include:
+
+\begin{itemize}
+\tightlist
+\item
+  Head
+\item
+  Right arm
+\item
+  Left arm
+\item
+  Torso
+\item
+  Right leg
+\item
+  Left leg
+\end{itemize}
+
+Each location may sustain three types of damage.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Flesh-wounds:} A hit that results in no immediate danger.
+  However, little things build up, and one must be wary of these minor
+  injuries. Four flesh-wounds form an injury.
+\item
+  \textbf{Injury:} A strike that is physically damaging. Each injury on
+  a location grants a -5 modifier to utilising that location.
+\item
+  \textbf{Critical Injury:} An injury that disables the location
+  entirely. If this is to the head or torso, it creates a mortal injury.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Upon receiving a critical injury, a character must make a TGH check.
+    On failure, the location may be removed entirely. This does not
+    apply to the head or torso.
+  \end{itemize}
+\end{itemize}
+
+\emph{The number of injuries to each location needed to form a Critical
+Injury on a normal human, or human-like creature.}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Region & Hits\tabularnewline
+\midrule
+\endhead
+Arms & 10\tabularnewline
+Legs & 10\tabularnewline
+Head & 5\tabularnewline
+Torso & 20\tabularnewline
+\bottomrule
+\end{longtable}
+
+\emph{The dice rolls when hitting, and their corresponding regions.}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Region & Dice\tabularnewline
+\midrule
+\endhead
+Head & 1-10\tabularnewline
+Right arm & 11-20\tabularnewline
+Left arm & 21-30\tabularnewline
+Torso & 31-70\tabularnewline
+Right leg & 71-85\tabularnewline
+Left leg & 86-00\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsubsection{Mortal Damage}\label{mortal-damage}
+
+Once a character receives a \textbf{mortal injury}, they become unable
+to function. If they are not stabilised within two turns, they must
+start rolling toughness checks every turn. If at any point they fail
+this check, they die.
+
+\subsubsection{Weapons}\label{weapons}
+
+Each \textbf{weapon} possesses a percentile chance of inflicting an
+injury. This is represented by a weapon's DP, or Damage Percentile. If a
+roll for damage beats (comes below) this value, an injury is inflicted.
+
+If the roll for damage fails, a flesh-wound is inflicted instead.
+
+If the roll surpasses four degrees of success, it automatically inflicts
+a critical injury.
+
+\subsubsection{Armour}\label{armour}
+
+\textbf{Armour} is available for each location. A piece of armour will
+possess an armour modifier. The armour modifier is added to the
+difficulty when rolling to hit.
+
+\subsection{Modifiers}\label{modifiers}
+
+\subsubsection{Status Effects}\label{status-effects}
+
+\textbf{Status effects} are additional effects applied onto characters.
+These effects may be beneficial, or negative.
+
+\begin{itemize}
+\tightlist
+\item
+  Blindness
+\item
+  Charmed
+\item
+  Deafness
+\item
+  Fatigue
+\item
+  Fright
+\item
+  Incapacitation
+\item
+  Inspiration
+\item
+  Paralysis
+\item
+  Poison
+\item
+  Rush
+\item
+  Stun
+\end{itemize}
+
+\subsection{Combat Flow}\label{combat-flow}
+
+\subsubsection{Initiating Combat}\label{initiating-combat}
+
+When \textbf{initiating combat}, all character should roll initiative
+equal to (x)d10, where x is equal to the tenth digit of the AGL score.
+
+If the attack is unexpected by the defenders, each attacker receives (in
+arbitrary order) one extra full turn before initiative is taken into
+account.
+
+\subsubsection{Turn actions}\label{turn-actions}
+
+\textbf{Turns} are comprised of two stages, an action, and a move.
+Unless otherwise specified, a non-movement action immediately ends the
+turn.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Move:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Move within the movement speed of the character.
+  \end{itemize}
+\item
+  \textbf{Sprint:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Move twice the movement speed of the character. This ends the turn.
+  \end{itemize}
+\item
+  \textbf{Defend:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Defend against the next attack. An attack the following turn has a
+    -10 to hitting the defender.
+  \end{itemize}
+\item
+  \textbf{Ranged / Melee Attack:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Make the appropriate roll (MWS or RWS) to hit the enemy. The
+    attacker may choose to make an aimed shot at a -20 to hit.
+  \item
+    Roll a d100 to determine the location hit. Refer to Locational
+    Damage for chart.
+  \item
+    On success, make a roll against the weapon's DP for each of the
+    weapon's speed. A weapon with 3 speed may roll damage 3 times.
+  \item
+    Repeat roll to hit and damage for each attack(s) per action.
+  \end{itemize}
+\item
+  \textbf{Magic Attack:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Make a magic roll based on the type of magic user.
+  \item
+    On success, apply spell effects to target. The target may make an
+    agility roll to dodge (MOD -20) if their AGL score is above 20.
+  \end{itemize}
+\item
+  \textbf{Other Actions:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Use any other action that may be used outside of combat.
+  \end{itemize}
+\end{itemize}
+
+\section{Classes}\label{classes}
+
+\textbf{Classes} are key to a character's basic build. They may provide
+skills, equipment, and additional features and abilities.
+
+\subsection{Class Generalisation}\label{class-generalisation}
+
+\subsubsection{Skills}\label{skills-1}
+
+A class will typically provide training in \textbf{skills}.
+
+\subsubsection{Equipment}\label{equipment}
+
+A class will typically provide a set of \textbf{starting equipment}. The
+item marked \emph{A knapsack with additional items and supplies.} should
+be filled by the Game Master with items relevant to the setting or
+adventure at hand.
+
+\subsubsection{Class Feature}\label{class-feature}
+
+A class will typically provide a \textbf{class feature}. A class feature
+is an ability or bonus available to all users of that class from the
+beginning.
+
+\subsection{Channeller}\label{channeller}
+
+\textbf{Skills:} Gain any five skills.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  One piece of light armour \emph{or} A dagger.
+\item
+  A casting item.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} You have with you the abilities of a lucky few.
+The natural means to channel arcane energy through your body and form it
+as you wish.
+
+\subsection{Fighter}\label{fighter}
+
+\textbf{Skills:} Gain four STR, TGH or AGL skills, one MDN or CHA skill,
+and one PER skill.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  One piece of medium armour \emph{or} One piece of light armour and any
+  ranged weapon.
+\item
+  Any melee weapon and a shield \emph{or} Two melee weapons.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} \emph{1)} Gain +10 in MWS, or \emph{2)} gain +10
+RWS.
+
+\subsection{Magician}\label{magician}
+
+\textbf{Skills:} Gain any five skills.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  One piece of light armour \emph{or} A dagger.
+\item
+  A casting item.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} You have strived in your studies to unlock the
+doors to the world of the arcane. Through your hard work, and sacrifice,
+you have achieved your goals, and can cast the magic you have learned.
+
+\subsection{None}\label{none}
+
+\textbf{Skills:} Gain any six skills.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Any weapon.
+\item
+  Any armour.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} Gain +8 in any characteristic.
+
+\subsection{Rogue}\label{rogue}
+
+\textbf{Skills:} Gain two AGL skills, two MDN or CHA skill, and two PER
+skill.
+
+\textbf{Equipment:} Start with the following equipment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  One piece of light armour.
+\item
+  Any light melee weapon \emph{or} Any light ranged weapon.
+\item
+  A knapsack with additional items and supplies.
+\end{enumerate}
+
+\textbf{Class Feature:} Your past is well, a little dodgy to say the
+least. You've almost certainly been involved in some sort of unsavoury
+behaviour, but you've learned from these experiences as well. Gain
+training in \emph{1)} Sleight of Hand, or \emph{2)} Stealth, or
+\emph{13} +10 in AGL or PER.
+
+\section{Equipment}\label{equipment-1}
+
+\subsection{Weapon Classification}\label{weapon-classification}
+
+\textbf{Weapons} are classified into a few broad categories. More
+categories may be created depending on the needs of the world or story.
+
+\subsubsection{Light Melee}\label{light-melee}
+
+\textbf{Dagger}
+
+\emph{Range:} 10m
+
+\emph{DP:} 10
+
+\emph{Speed:} 3
+
+\subsubsection{Light Ranged}\label{light-ranged}
+
+\subsubsection{Normal Melee}\label{normal-melee}
+
+\textbf{Shortsword}
+
+\emph{Range:} 0m
+
+\emph{DP:} 40
+
+\emph{Speed:} 2
+
+\textbf{Longsword}
+
+\emph{Range:} 0m
+
+\emph{DP:} 60
+
+\emph{Speed:} 1
+
+\subsubsection{Normal Ranged}\label{normal-ranged}
+
+\subsubsection{Unarmed Melee}\label{unarmed-melee}
+
+\subsubsection{Unarmed Ranged}\label{unarmed-ranged}
+
+\subsection{Armour Classification}\label{armour-classification}
+
+Armour are classified into a few broad categories. More categories may
+be created depending on the needs of the world or story.
+
+\subsubsection{Light}\label{light}
+
+\textbf{Leather}
+
+\emph{Rating:} -15
+
+\textbf{Gauntlet}
+
+\emph{Rating:} -10
+
+\subsubsection{Medium}\label{medium}
+
+\subsubsection{Heavy}\label{heavy}
+
+\subsubsection{Shields}\label{shields}
+
+\section{Magic}\label{magic}
+
+\subsection{Techniques}\label{techniques}
+
+\textbf{Techniques} are verbs.
+
+\textbf{Classical techniques} include the following:
+
+\begin{itemize}
+\tightlist
+\item
+  To command
+\item
+  To conjure
+\item
+  To infuse
+\item
+  To know
+\item
+  To mutate
+\end{itemize}
+
+\textbf{Free-form techniques} are any transitive action verbs.
+
+\subsection{Aspects}\label{aspects}
+
+\textbf{Aspects} are nouns.
+
+\textbf{Classical elements} include the following:
+
+\begin{itemize}
+\tightlist
+\item
+  Aether
+\item
+  Air
+\item
+  Earth
+\item
+  Fire
+\item
+  Metal
+\item
+  Water
+\item
+  Wood
+\end{itemize}
+
+\textbf{Concrete aspects} are concrete nouns.
+
+\textbf{Abstract aspects} are abstract nouns, in referring to ideas,
+qualities, and conditions.
+
+\textbf{Collective aspects} are collective nouns, in referring to a
+collective of people or things.
+
+\textbf{Proper aspects} are proper nouns.
+
+\subsection{Forms}\label{forms}
+
+Forms are always concrete nouns. They indicate the form in which the
+aspect will be cast to.
+
+\end{document}
